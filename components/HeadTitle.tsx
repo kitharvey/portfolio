@@ -14,7 +14,7 @@ const HeadTitle: React.FC<HeadTitleProps> = ({ title }) => {
 		<Head>
 			<meta charSet="utf-8" />
 			<meta name="viewport" content="initial-scale=1.0, width=device-width" />
-			<title>{title} / Kit Harvey</title>
+			<title>{title ? title + "/Portfolio" : "Portfolio"}</title>
 			<link
 				rel="shortcut icon"
 				type="image/png"
