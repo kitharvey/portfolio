@@ -66,14 +66,6 @@ const About = () => {
 											<p className="company">
 												<span>{exp.title}</span>&nbsp;&#64;&nbsp;{exp.company}
 											</p>
-											<ul>
-												{exp.descriptions &&
-													exp.descriptions.map((description) => (
-														<li key={description}>
-															<p>&#8226;&nbsp;{description}</p>
-														</li>
-													))}
-											</ul>
 										</div>
 									);
 								})}

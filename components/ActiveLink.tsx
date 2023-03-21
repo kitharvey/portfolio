@@ -1,4 +1,4 @@
-import { useRouter } from "next/router";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 import React, { Children } from "react";
 
@@ -13,7 +13,7 @@ const ActiveLink: React.FC<ActiveLinkProps> = ({
 	activeClassName,
 	...props
 }) => {
-	const { asPath } = useRouter();
+	const asPath = usePathname();
 	const child = Children.only(children);
 
 	const className =

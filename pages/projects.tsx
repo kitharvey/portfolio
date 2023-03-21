@@ -52,16 +52,12 @@ const Projects = () => {
 				</div>
 				<div className="other-projects">
 					<h3>Other Projects:</h3>
-					<div>
-						{otherProjects &&
-							otherProjects.map(({ url, title }) => (
-								<span key={title}>
-									<a href={url} key={title} target="__blank">
-										{title}
-									</a>
-								</span>
-							))}
-					</div>
+					{otherProjects &&
+						otherProjects.map(({ url, title }) => (
+							<a href={url} key={title} target="__blank">
+								<span>{title}</span>
+							</a>
+						))}
 				</div>
 			</div>
 		</>

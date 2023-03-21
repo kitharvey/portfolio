@@ -53,11 +53,12 @@ body {
 	}
 
 	a {
+		display: block;
 		cursor: pointer;
 		text-decoration: none;
 		color: currentColor;
 		transition: all ease-in-out;
-		line-height: 1;
+		height: max-content;
 		&:hover {
 			color: $a-color;
 		}
