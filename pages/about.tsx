@@ -1,5 +1,6 @@
 import HeadTitle from "@/components/HeadTitle";
-
+const overview =
+	"Hi, I'm a Front-End Developer based in General Santos City, Philippines. I'm always fascinated by graphic design, typography and algorithms. Front-End development has given me the ability to do both design and code. I was hooked and I wanted to master this craft. My dream is to work with like-minded and passionate people building projects. When I'm away from my keyboard you can find me at the gym pumping irons, running and spending time with friends and family. I also love learning self-improvement, philosophy, finance, health and fitness. There is always room to grow.";
 const experiences = [
 	{
 		company: "CAMBIATA MUSIC",
@@ -17,7 +18,6 @@ const experiences = [
 		date: "JULY 2020 - OCTOBER 2020",
 	},
 ];
-
 const tools = [
 	"JavaScript/HTML/CSS",
 	"SCSS/Sass",
@@ -43,18 +43,7 @@ const About = () => {
 					<div className="about-details">
 						<div className="overview">
 							<h1>Overview</h1>
-							<p className="overview-text">
-								Hi, I&apos;m a Front-End Developer based in General Santos City,
-								Philippines. I&apos;m always fascinated by graphic design,
-								typography and algorithms. Front-End development has given me
-								the ability to do both design and code. I was hooked and I
-								wanted to master this craft. My dream is to work with
-								like-minded and passionate people building projects. When
-								I&apos;m away from my keyboard you can find me at the gym
-								pumping irons, running and spending time with friends and
-								family. I also love learning self-improvement, philosophy,
-								finance, health and fitness. There is always room to grow.
-							</p>
+							<p className="overview-text">{overview}</p>
 						</div>
 						<div className="experience">
 							<h1>Experience</h1>

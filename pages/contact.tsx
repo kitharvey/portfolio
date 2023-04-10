@@ -3,6 +3,7 @@ import { Formik, Form, Field, ErrorMessage, FastField } from "formik";
 import * as Yup from "yup";
 import emailjs from "@emailjs/browser";
 import Recaptcha from "react-google-recaptcha";
+import Link from "next/link";
 
 const Contact = () => {
 	return (
@@ -15,12 +16,12 @@ const Contact = () => {
 							<p>
 								Feel free to email me via{" "}
 								<span>
-									<a
+									<Link
 										href="mailto:kitharveycaubalejo@gmail.com"
 										target="__blank"
 									>
 										kitharveycaubalejo@gmail.com
-									</a>
+									</Link>
 								</span>
 							</p>
 							<p>Or fill in the contact form down below</p>
@@ -153,15 +154,18 @@ const Contact = () => {
 					<div className="accounts">
 						<p>Follow me on</p>
 						<div className="links">
-							<a href="https://github.com/kitharvey" target="__blank">
+							<Link href="https://github.com/kitharvey" target="__blank">
 								GitHub
-							</a>
-							<a href="https://www.linkedin.com/in/kitharvey/" target="__blank">
+							</Link>
+							<Link
+								href="https://www.linkedin.com/in/kitharvey/"
+								target="__blank"
+							>
 								LinkedIn
-							</a>
-							<a href="https://twitter.com/kithrvy/" target="__blank">
+							</Link>
+							<Link href="https://twitter.com/kithrvy/" target="__blank">
 								Twitter
-							</a>
+							</Link>
 						</div>
 					</div>
 				</div>
