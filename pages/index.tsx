@@ -9,9 +9,7 @@ export default function Home() {
 				<div className="main-text">
 					<h1 className="name">I&apos;m Kit Harvey.</h1>
 					<p className="des">
-						I&apos;m a self-taught front-end developer. <br />I help clients and
-						companies build their web user interfaces using ReactJS, NextJS,
-						TypeScript and Sass.
+						I&apos;m a self-taught front-end developer.
 					</p>
 				</div>
 				<div className="main-buttons-container">
@@ -19,6 +17,7 @@ export default function Home() {
 						<Link
 							href="https://docs.google.com/document/d/1Tx2Juuh6GJFa-CyOJjWkIc0hYZkQy_EAEnXNrR9Ds60/edit?usp=sharing"
 							target="__blank"
+							
 						>
 							View Resume
 						</Link>
