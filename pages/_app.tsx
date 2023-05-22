@@ -11,6 +11,14 @@ export default function App({ Component, pageProps }: AppProps) {
 					<Nav />
 					<Component {...pageProps} />
 				</div>
+				<svg>
+					<filter id="grainy">
+						<feTurbulence
+							type="turbulence"
+							baseFrequency={0.5}
+						/>
+					</filter>
+				</svg>
 			</div>
 			<Analytics />
 		</>
