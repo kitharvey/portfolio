@@ -6,35 +6,14 @@ interface ProjectProp {
 	tools: string[];
 	repo: string;
 	demo: string;
-	gif: string;
-	gifPause: string;
 }
 interface ProjectWrapperProps {
 	project: ProjectProp;
 	index: number;
-	isPlaying: number | null;
-	onMouseOut: () => void;
-	onBlur: () => void;
-	onMouseOver: () => void;
-	onFocus: () => void;
 }
 
-const ProjectWrapper: React.FC<ProjectWrapperProps> = ({
-	project,
-	index,
-	isPlaying,
-	onMouseOut,
-	onBlur,
-	onMouseOver,
-	onFocus,
-}) => (
-	<div
-		className="proj"
-		onMouseOut={onMouseOut}
-		onBlur={onBlur}
-		onMouseOver={onMouseOver}
-		onFocus={onFocus}
-	>
+const ProjectWrapper: React.FC<ProjectWrapperProps> = ({ project, index }) => (
+	<div className="proj">
 		<div className="details">
 			<h2>{project.title}</h2>
 			<div className="subtitles">
@@ -48,23 +27,23 @@ const ProjectWrapper: React.FC<ProjectWrapperProps> = ({
 				))}
 			</ul>
 			<div className="subtitles">
-				<a className="link" href={project.repo} target="__blank">
+				<a
+					className="link"
+					href={project.repo}
+					target="__blank"
+				>
 					{" "}
 					<small>Repository </small>{" "}
 				</a>
-				<a className="link" href={project.demo} target="__blank">
+				<a
+					className="link"
+					href={project.demo}
+					target="__blank"
+				>
 					{" "}
 					<small>Website </small>{" "}
 				</a>
 			</div>
-		</div>
-		<div className="video-container">
-			<Image
-				className="video"
-				src={isPlaying === index ? project.gif : project.gifPause}
-				alt={project.title}
-				layout="fill"
-			/>
 		</div>
 	</div>
 );

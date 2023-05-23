@@ -1,7 +1,7 @@
 .home {
 	.main-text {
 		padding: 50px 0;
-		.des {
+		.description {
 			font-size: 1.2rem;
 		}
 	}
@@ -115,14 +115,13 @@
 	}
 }
 
-#page {
+.section {
 	width: 100%;
 	height: max-content;
 	display: flex;
 	align-items: flex-start;
 	justify-content: center;
 	flex-direction: column;
-	flex-grow: 1;
 	h1 {
 		font-size: 4rem;
 	}

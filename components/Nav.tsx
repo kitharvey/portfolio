@@ -1,10 +1,10 @@
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
-// import {
-// 	disableBodyScroll,
-// 	enableBodyScroll,
-// 	clearAllBodyScrollLocks,
-// } from "body-scroll-lock";
+import {
+	disableBodyScroll,
+	enableBodyScroll,
+	clearAllBodyScrollLocks,
+} from "body-scroll-lock";
 import ActiveLink from "./ActiveLink";
 
 export default function Nav() {
@@ -19,19 +19,19 @@ export default function Nav() {
 		setOpener(!isOpen);
 	};
 
-	// useEffect(() => {
-	// 	if (isOpen) disableBodyScroll(document.body);
-	// 	else enableBodyScroll(document.body);
-	// 	return () => {
-	// 		clearAllBodyScrollLocks();
-	// 	};
-	// }, [isOpen]);
+	useEffect(() => {
+		if (isOpen) disableBodyScroll(document.body);
+		else enableBodyScroll(document.body);
+		return () => {
+			clearAllBodyScrollLocks();
+		};
+	}, [isOpen]);
 
 	return (
 		<div className="header">
 			<div className="nav">
 				<div className="logo">
-					<Link href="/">
+					<Link href="#">
 						<svg
 							version="1.1"
 							id="Layer_1"
@@ -58,16 +58,28 @@ export default function Nav() {
 				</div>
 
 				<div className="web-menu">
-					<ActiveLink activeClassName="active" href="/">
+					<ActiveLink
+						activeClassName="active"
+						href="#home"
+					>
 						<span>Home</span>
 					</ActiveLink>
-					<ActiveLink activeClassName="active" href="/projects">
+					<ActiveLink
+						activeClassName="active"
+						href="#projects"
+					>
 						<span>Projects</span>
 					</ActiveLink>
-					<ActiveLink activeClassName="active" href="/about">
+					<ActiveLink
+						activeClassName="active"
+						href="#about"
+					>
 						<span>About</span>
 					</ActiveLink>
-					<ActiveLink activeClassName="active" href="/contact">
+					<ActiveLink
+						activeClassName="active"
+						href="#contact"
+					>
 						<span>Contact</span>
 					</ActiveLink>
 				</div>
@@ -90,16 +102,28 @@ export default function Nav() {
 						className="menu"
 						onClick={onClickHandler}
 					>
-						<ActiveLink activeClassName="active" href="/">
+						<ActiveLink
+							activeClassName="active"
+							href="/"
+						>
 							<span>Home</span>
 						</ActiveLink>
-						<ActiveLink activeClassName="active" href="/projects">
+						<ActiveLink
+							activeClassName="active"
+							href="/projects"
+						>
 							<span>Projects</span>
 						</ActiveLink>
-						<ActiveLink activeClassName="active" href="/about">
+						<ActiveLink
+							activeClassName="active"
+							href="/about"
+						>
 							<span>About</span>
 						</ActiveLink>
-						<ActiveLink activeClassName="active" href="/contact">
+						<ActiveLink
+							activeClassName="active"
+							href="/contact"
+						>
 							<span>Contact</span>
 						</ActiveLink>
 					</div>
