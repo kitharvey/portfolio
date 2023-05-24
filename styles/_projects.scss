@@ -52,23 +52,13 @@
 						font-weight: 400;
 					}
 					.link {
-						color: $bg-color;
-						padding: 10px;
 						height: max-content;
 						margin-right: 15px;
+						font-weight: 700;
 						display: flex;
 						align-items: center;
 						justify-content: center;
 						cursor: pointer;
-						border-radius: 5px;
-						background: $a-color;
-						box-shadow: 5px 5px 0px 0px $b-color;
-						transition: all 0.15s ease-in-out;
-						&:hover {
-							color: #ffffff;
-							box-shadow: 0px 0px 0px 0px $b-color;
-							transform: translateX(5px) translateY(5px);
-						}
 					}
 				}
 			}

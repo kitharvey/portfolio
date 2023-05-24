@@ -3,7 +3,6 @@ import ProjectWrapper from "./ProjectWrapper";
 
 interface ProjectsPageProps {
 	projects: ProjectType[];
-	otherProjects: OtherProjectsType[];
 }
 
 type ProjectType = {
@@ -14,15 +13,7 @@ type ProjectType = {
 	demo: string;
 };
 
-type OtherProjectsType = {
-	title: string;
-	url: string;
-};
-
-const ProjectsPage: React.FC<ProjectsPageProps> = ({
-	projects,
-	otherProjects,
-}) => {
+const Projects: React.FC<ProjectsPageProps> = ({ projects }) => {
 	return (
 		<div
 			id="projects"
@@ -37,21 +28,8 @@ const ProjectsPage: React.FC<ProjectsPageProps> = ({
 					/>
 				))}
 			</div>
-			<div className="other-projects">
-				<h3>Other Projects:</h3>
-				{otherProjects &&
-					otherProjects.map(({ url, title }) => (
-						<a
-							href={url}
-							key={title}
-							target="__blank"
-						>
-							<span>{title}</span>
-						</a>
-					))}
-			</div>
 		</div>
 	);
 };
 
-export default ProjectsPage;
+export default Projects;

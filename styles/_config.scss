@@ -9,76 +9,15 @@
 
 .wrapper {
 	width: 100%;
-	min-height: 100vh;
-	position: relative;
-
-	&:before {
-		content: "";
-		position: absolute;
-		height: 300%;
-		width: 300%;
-		opacity: 0.3;
-		position: fixed;
-		left: -50%;
-		top: -100%;
-		animation: grain 20s steps(10) infinite;
-	}
-	&:before {
-		background-color: #000000;
-		filter: url(#grainy);
-	}
-
-	svg {
-		position: absolute;
-		left: 0;
-		top: 0;
-		z-index: -2;
-	}
-}
-
-@keyframes grain {
-	0%,
-	100% {
-		transform: translate(0, 0);
-	}
-	10% {
-		transform: translate(-5%, -10%);
-	}
-	20% {
-		transform: translate(-15%, 5%);
-	}
-	30% {
-		transform: translate(7%, -25%);
-	}
-	40% {
-		transform: translate(-5%, 25%);
-	}
-	50% {
-		transform: translate(-15%, 10%);
-	}
-	60% {
-		transform: translate(15%, 0%);
-	}
-	70% {
-		transform: translate(0%, 15%);
-	}
-	80% {
-		transform: translate(3%, 35%);
-	}
-	90% {
-		transform: translate(-10%, 10%);
-	}
 }
 
 .container {
 	width: 100%;
 	min-height: 100vh;
 	margin: 0 auto;
-	padding: 0 25px;
-	padding-bottom: 2em;
+	padding: 2em;
 	display: flex;
 	flex-direction: column;
-	gap: 10em;
 	@media screen and (min-width: 640px) {
 		max-width: 640px;
 	}
@@ -159,7 +98,7 @@ body {
 				flex-direction: column;
 				align-items: center;
 				justify-content: center;
-				font-size: small;
+				font-size: 0.75rem;
 				text-transform: none;
 				font-family: $mono-font;
 				text-align: center;

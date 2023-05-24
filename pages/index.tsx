@@ -1,10 +1,9 @@
-import AboutPage from "@/components/AboutPage";
-import ContactPage from "@/components/ContactPage";
-import HeadTitle from "@/components/HeadTitle";
-import ProjectsPage from "@/components/ProjectsPage";
-import Link from "next/link";
+import About from "@/components/About";
+import Contact from "@/components/Contact";
+import Projects from "@/components/Projects";
+import Home from "@/components/Home";
 
-export default function Home() {
+export default function index() {
 	const project = {
 		projects: [
 			{
@@ -23,13 +22,6 @@ export default function Home() {
 				],
 				repo: "https://github.com/kitharvey/pokenex",
 				demo: "https://pokenex.vercel.app/",
-			},
-		],
-
-		otherProjects: [
-			{
-				title: "Frontend Mentor Submissions",
-				url: "https://www.frontendmentor.io/profile/kitharvey",
 			},
 		],
 	};
@@ -56,40 +48,13 @@ export default function Home() {
 	};
 	return (
 		<>
-			<HeadTitle title="" />
-			<div
-				id="home"
-				className="section home"
-			>
-				<div className="main-text">
-					<h1 className="name">I&apos;m Kit Harvey.</h1>
-					<p className="description">
-						I&apos;m a self-taught front-end developer.
-					</p>
-				</div>
-				<div className="main-buttons-container">
-					<div className="main-buttons">
-						<Link
-							href="https://docs.google.com/document/d/1Tx2Juuh6GJFa-CyOJjWkIc0hYZkQy_EAEnXNrR9Ds60/edit?usp=sharing"
-							target="__blank"
-						>
-							View Resume
-						</Link>
-					</div>
-					<div className="main-buttons">
-						<Link href="/contact">Hire Me</Link>
-					</div>
-				</div>
-			</div>
-			<ProjectsPage
-				projects={project.projects}
-				otherProjects={project.otherProjects}
-			/>
-			<AboutPage
+			<Home />
+			<Contact />
+			<About
 				overview={about.overview}
 				experiences={about.experiences}
 			/>
-			<ContactPage />
+			<Projects projects={project.projects} />
 		</>
 	);
 }
