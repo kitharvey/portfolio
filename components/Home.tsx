@@ -1,14 +1,23 @@
 import React from "react";
 import Link from "next/link";
+import MouseOver from "./MouseOver";
 
 const Home: React.FC = ({}) => {
+	const name = "I'm Kit Harvey.";
 	return (
 		<div
 			id="home"
 			className="section home"
 		>
 			<div className="main-text">
-				<h1 className="name">I&apos;m Kit Harvey.</h1>
+				<h1 className="name">
+					{name.split("").map((letter, index) => (
+						<MouseOver
+							key={index}
+							letter={letter}
+						/>
+					))}
+				</h1>
 				<p className="description">
 					I&apos;m a self-taught front-end developer.
 				</p>

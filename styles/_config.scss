@@ -5,6 +5,9 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	transition-property: all;
+	transition-duration: 0.1s;
+	transition-timing-function: cubic-bezier(0.17, 1.64, 0.9, 1.53);
 }
 
 .wrapper {
@@ -18,95 +21,39 @@
 	padding: 2em;
 	display: flex;
 	flex-direction: column;
-	@media screen and (min-width: 640px) {
-		max-width: 640px;
-	}
-	@media screen and (min-width: 768px) {
-		max-width: 768px;
-	}
-	@media screen and (min-width: 1024px) {
-		max-width: 1024px;
-	}
-	@media screen and (min-width: 1280px) {
-		max-width: 1280px;
-	}
+	max-width: 640px;
 }
 
-body {
-	font-family: $default-font;
-	background: $bg-color;
-	color: $text-color;
-	-webkit-font-smoothing: antialiased;
-	line-height: 1.25;
-	overflow-x: hidden;
-	width: 100%;
-	.title-section {
-		font-family: $mono-font;
-		color: $a-color;
-		margin-bottom: 50px;
-	}
+// body {
+// 	font-family: $default-font;
+// 	background: $bg-color;
+// 	color: $text-color;
+// 	-webkit-font-smoothing: antialiased;
+// 	line-height: 1.25;
+// 	overflow-x: hidden;
+// 	width: 100%;
+// 	a {
+// 		display: block;
+// 		cursor: pointer;
+// 		text-decoration: none;
+// 		color: currentColor;
+// 		transition: all ease-in-out;
+// 		height: max-content;
+// 		&:hover {
+// 			color: $a-color;
+// 		}
+// 	}
 
-	a {
-		display: block;
-		cursor: pointer;
-		text-decoration: none;
-		color: currentColor;
-		transition: all ease-in-out;
-		height: max-content;
-		&:hover {
-			color: $a-color;
-		}
-	}
+// 	p,
+// 	h1,
+// 	h2,
+// 	a,
+// 	form,
+// 	ul {
+// 		position: relative;
+// 	}
 
-	h1,
-	h2 {
-		color: $a-color;
-	}
-
-	p,
-	h1,
-	h2,
-	a,
-	form,
-	ul {
-		position: relative;
-	}
-
-	li {
-		list-style-type: none;
-	}
-
-	footer {
-		position: fixed;
-		bottom: 0;
-		height: max-content;
-		width: 100%;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		margin-top: 100px;
-
-		@media (max-width: 800px) {
-			position: unset;
-		}
-
-		.main-buttons {
-			margin: 20px 0;
-			p {
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				justify-content: center;
-				font-size: 0.75rem;
-				text-transform: none;
-				font-family: $mono-font;
-				text-align: center;
-			}
-			.bottom {
-				margin-top: 10px;
-				text-align: center;
-			}
-		}
-	}
-}
+// 	li {
+// 		list-style-type: none;
+// 	}
+// }

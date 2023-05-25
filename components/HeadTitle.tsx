@@ -13,23 +13,53 @@ const HeadTitle: React.FC<HeadTitleProps> = ({ title }) => {
 	return (
 		<Head>
 			<meta charSet="utf-8" />
-			<meta name="viewport" content="initial-scale=1.0, width=device-width" />
+			<meta
+				name="viewport"
+				content="initial-scale=1.0, width=device-width"
+			/>
 			<title>{title ? title + " / Kit Harvey" : "Kit Harvey"}</title>
 			<link
 				rel="shortcut icon"
 				type="image/png"
-				href="/icon.png"
+				href="/images/icon.png"
 				sizes="50x32"
 			/>
-			<meta name="title" content="Kit Harvey" />
-			<meta name="description" content={metaDescription} />
-			<meta name="image" content={metaIMG} />
-			<meta name="og:title" content="Kit Harvey" />
-			<meta name="og:description" content={metaDescription} />
-			<meta name="og:image" content={metaIMG} />
-			<meta name="twitter:title" content="Kit Harvey" />
-			<meta name="twitter:description" content={metaDescription} />
-			<meta name="twitter:image" content={metaIMG} />
+			<meta
+				name="title"
+				content="Kit Harvey"
+			/>
+			<meta
+				name="description"
+				content={metaDescription}
+			/>
+			<meta
+				name="image"
+				content={metaIMG}
+			/>
+			<meta
+				name="og:title"
+				content="Kit Harvey"
+			/>
+			<meta
+				name="og:description"
+				content={metaDescription}
+			/>
+			<meta
+				name="og:image"
+				content={metaIMG}
+			/>
+			<meta
+				name="twitter:title"
+				content="Kit Harvey"
+			/>
+			<meta
+				name="twitter:description"
+				content={metaDescription}
+			/>
+			<meta
+				name="twitter:image"
+				content={metaIMG}
+			/>
 		</Head>
 	);
 };

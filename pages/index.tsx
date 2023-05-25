@@ -2,6 +2,7 @@ import About from "@/components/About";
 import Contact from "@/components/Contact";
 import Projects from "@/components/Projects";
 import Home from "@/components/Home";
+import Grains from "@/components/Grains";
 
 export default function index() {
 	const project = {
@@ -55,6 +56,7 @@ export default function index() {
 				experiences={about.experiences}
 			/>
 			<Projects projects={project.projects} />
+			<Grains />
 		</>
 	);
 }

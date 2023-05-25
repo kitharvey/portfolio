@@ -15,7 +15,7 @@ interface ProjectWrapperProps {
 const ProjectWrapper: React.FC<ProjectWrapperProps> = ({ project, index }) => (
 	<div className="proj">
 		<div className="details">
-			<h2>{project.title}</h2>
+			<p>{project.title}</p>
 			<div className="subtitles">
 				<p className="description">{project.description}</p>
 			</div>
