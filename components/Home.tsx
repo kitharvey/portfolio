@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import MouseOver from "./MouseOver";
+import LoadStyle from "./LoadStyle";
 
 const Home: React.FC = ({}) => {
 	const name = "I'm Kit Harvey.";
@@ -18,9 +19,9 @@ const Home: React.FC = ({}) => {
 						/>
 					))}
 				</h1>
-				<p className="description">
-					I&apos;m a self-taught front-end developer.
-				</p>
+				<LoadStyle newClassName={["fontDefault", "fontSizeDefault"]}>
+					<p>I'm a self-taught front-end developer.</p>
+				</LoadStyle>
 			</div>
 			<div className="links">
 				<Link
