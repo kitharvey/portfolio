@@ -1,15 +1,11 @@
 import Head from "next/head";
 import React from "react";
 
-interface HeadTitleProps {
-	title: string;
-}
-
 const metaIMG = "/port.gif";
 const metaDescription =
 	"I'm a self-taught front-end developer. I help clients and companies build their web user interfaces using ReactJS, NextJS, TypeScript and Sass.";
 
-const HeadTitle: React.FC<HeadTitleProps> = ({ title }) => {
+const HeadTitle: React.FC = () => {
 	return (
 		<Head>
 			<meta charSet="utf-8" />
@@ -17,11 +13,11 @@ const HeadTitle: React.FC<HeadTitleProps> = ({ title }) => {
 				name="viewport"
 				content="initial-scale=1.0, width=device-width"
 			/>
-			<title>{title ? title + " / Kit Harvey" : "Kit Harvey"}</title>
+			<title>Kit Harvey</title>
 			<link
 				rel="shortcut icon"
 				type="image/png"
-				href="/images/icon.png"
+				href="/images/favicon.ico"
 				sizes="50x32"
 			/>
 			<meta

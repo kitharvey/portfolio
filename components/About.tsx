@@ -1,4 +1,5 @@
 import React from "react";
+import RenderString from "./RenderString";
 
 interface AboutPageProps {
 	overview: string;
@@ -13,32 +14,39 @@ type ExpTypes = {
 
 const About: React.FC<AboutPageProps> = ({ overview, experiences }) => {
 	return (
-		<div
-			id="about"
-			className="section about"
-		>
-			<div className="about-container">
-				<div className="about-details">
-					<div className="overview">
-						<p className="overview-text">{overview}</p>
-					</div>
-					<div className="experience">
-						<div className="company-wrapper">
-							{experiences.map((exp, index) => {
-								return (
-									<div
-										className="company-section"
-										key={index}
-									>
-										<p className="time">{exp.date}</p>
-										<p className="company">
-											<span>{exp.title}</span>&nbsp;&#64;&nbsp;{exp.company}
-										</p>
-									</div>
-								);
-							})}
-						</div>
-					</div>
+		<div id="about">
+			<div>
+				<p>
+					<RenderString
+						letters={overview}
+						fontFamily="default"
+						fontSize="md"
+						fontWeight="normal"
+					/>
+				</p>
+				<div>
+					{experiences.map((exp, index) => {
+						return (
+							<div key={index}>
+								<p>
+									<RenderString
+										letters={exp.date}
+										fontFamily="default"
+										fontSize="md"
+										fontWeight="normal"
+									/>
+								</p>
+								<p>
+									<RenderString
+										letters={exp.company}
+										fontFamily="default"
+										fontSize="md"
+										fontWeight="bold"
+									/>
+								</p>
+							</div>
+						);
+					})}
 				</div>
 			</div>
 		</div>

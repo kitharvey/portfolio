@@ -15,19 +15,13 @@ type ProjectType = {
 
 const Projects: React.FC<ProjectsPageProps> = ({ projects }) => {
 	return (
-		<div
-			id="projects"
-			className="section projects"
-		>
-			<div className="proj-wrapper">
-				{projects.map((project, index) => (
-					<ProjectWrapper
-						project={project}
-						index={index}
-						key={project.title}
-					/>
-				))}
-			</div>
+		<div id="projects">
+			{projects.map((project) => (
+				<ProjectWrapper
+					project={project}
+					key={project.title}
+				/>
+			))}
 		</div>
 	);
 };

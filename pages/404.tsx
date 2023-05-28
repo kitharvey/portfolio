@@ -1,12 +1,25 @@
-import HeadTitle from "@/components/HeadTitle";
+import RenderString from "@/components/RenderString";
 
 const NotFound = () => {
 	return (
-		<div className="notfound-wrapper">
-			<HeadTitle title="404" />
-			<h1>404</h1>
-			<p>This page could not be found.</p>
-		</div>
+		<>
+			<h1>
+				<RenderString
+					letters="404"
+					fontFamily="default"
+					fontSize="lg"
+					fontWeight="bold"
+				/>
+			</h1>
+			<p>
+				<RenderString
+					letters="This page could not be found."
+					fontFamily="default"
+					fontSize="md"
+					fontWeight="normal"
+				/>
+			</p>
+		</>
 	);
 };
 

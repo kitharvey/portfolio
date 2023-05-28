@@ -1,4 +1,7 @@
 import Image from "next/image";
+import RenderString from "./RenderString";
+import Link from "next/link";
+import { useLoadStyle } from "@/hooks/useLoadStyle";
 
 interface ProjectProp {
 	title: string;
@@ -9,43 +12,77 @@ interface ProjectProp {
 }
 interface ProjectWrapperProps {
 	project: ProjectProp;
-	index: number;
 }
 
-const ProjectWrapper: React.FC<ProjectWrapperProps> = ({ project, index }) => (
-	<div className="proj">
-		<div className="details">
-			<p>{project.title}</p>
-			<div className="subtitles">
-				<p className="description">{project.description}</p>
-			</div>
-			<ul className="tools">
+const ProjectWrapper: React.FC<ProjectWrapperProps> = ({ project }) => {
+	const style = useLoadStyle({ columnGap: "1em" });
+
+	return (
+		<div>
+			<p>
+				<RenderString
+					letters={project.title}
+					fontFamily="default"
+					fontSize="md"
+					fontWeight="bold"
+				/>
+			</p>
+			<p>
+				<RenderString
+					letters={project.description}
+					fontFamily="default"
+					fontSize="sm"
+					fontWeight="normal"
+				/>
+			</p>
+			<ul
+				className="display-flex"
+				style={style}
+			>
 				{project.tools.map((tool) => (
 					<li key={tool}>
-						<p className="description">{tool}</p>
+						<p>
+							<RenderString
+								letters={tool}
+								fontFamily="mono"
+								fontSize="sm"
+								fontWeight="normal"
+							/>
+						</p>
 					</li>
 				))}
 			</ul>
-			<div className="subtitles">
-				<a
-					className="link"
+			<div
+				className="display-flex"
+				style={style}
+			>
+				<Link
 					href={project.repo}
 					target="__blank"
 				>
 					{" "}
-					<small>Repository </small>{" "}
-				</a>
-				<a
-					className="link"
+					<RenderString
+						letters="Repository"
+						fontFamily="default"
+						fontSize="sm"
+						fontWeight="medium"
+					/>
+				</Link>
+				<Link
 					href={project.demo}
 					target="__blank"
 				>
 					{" "}
-					<small>Website </small>{" "}
-				</a>
+					<RenderString
+						letters="Website"
+						fontFamily="default"
+						fontSize="sm"
+						fontWeight="medium"
+					/>
+				</Link>
 			</div>
 		</div>
-	</div>
-);
+	);
+};
 
 export default ProjectWrapper;

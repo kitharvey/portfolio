@@ -1,64 +1,126 @@
 import React from "react";
 import Link from "next/link";
-import MouseOver from "./MouseOver";
-import LoadStyle from "./LoadStyle";
+import RenderString from "./RenderString";
+import { useLoadStyle } from "@/hooks/useLoadStyle";
 
 const Home: React.FC = ({}) => {
-	const name = "I'm Kit Harvey.";
+	const name = "Kit Harvey";
+	const subname = "self-taught front-end developer";
+	const style = useLoadStyle({ columnGap: "1em" });
 	return (
-		<div
-			id="home"
-			className="section home"
-		>
-			<div className="main-text">
-				<h1 className="name">
-					{name.split("").map((letter, index) => (
-						<MouseOver
-							key={index}
-							letter={letter}
-						/>
-					))}
+		<div id="home">
+			<div>
+				<h1>
+					<RenderString
+						letters={name}
+						fontFamily="default"
+						fontSize="lg"
+						fontWeight="bold"
+					/>
 				</h1>
-				<LoadStyle newClassName={["fontDefault", "fontSizeDefault"]}>
-					<p>I'm a self-taught front-end developer.</p>
-				</LoadStyle>
+				<p>
+					<RenderString
+						letters={subname}
+						fontFamily="default"
+						fontSize="md"
+						fontWeight="normal"
+					/>
+				</p>
 			</div>
-			<div className="links">
+			<div>
 				<Link
 					href="https://docs.google.com/document/d/1Tx2Juuh6GJFa-CyOJjWkIc0hYZkQy_EAEnXNrR9Ds60/edit?usp=sharing"
 					target="__blank"
 				>
-					View Résumé
+					<RenderString
+						letters="Résumé"
+						fontFamily="default"
+						fontSize="sm"
+						fontWeight="medium"
+					/>
 				</Link>
 			</div>
-			<div className="accounts">
-				<p>Follow me on</p>
-				<div className="links">
+			<div>
+				<p>
+					<RenderString
+						letters="Follow me on"
+						fontFamily="default"
+						fontSize="sm"
+						fontWeight="normal"
+					/>
+				</p>
+				<div
+					className="display-flex"
+					style={style}
+				>
 					<Link
 						href="https://github.com/kitharvey"
 						target="__blank"
 					>
-						GitHub
+						<RenderString
+							letters="GitHub"
+							fontFamily="default"
+							fontSize="sm"
+							fontWeight="medium"
+						/>
 					</Link>
 					<Link
 						href="https://www.linkedin.com/in/kitharvey/"
 						target="__blank"
 					>
-						LinkedIn
+						<RenderString
+							letters="LinkedIn"
+							fontFamily="default"
+							fontSize="sm"
+							fontWeight="medium"
+						/>
 					</Link>
 					<Link
 						href="https://twitter.com/kithrvy/"
 						target="__blank"
 					>
-						Twitter
+						<RenderString
+							letters="Twitter"
+							fontFamily="default"
+							fontSize="sm"
+							fontWeight="medium"
+						/>
 					</Link>
 					<Link
 						href="https://www.frontendmentor.io/profile/kitharvey"
 						target="__blank"
 					>
-						Frontend Mentor
+						<RenderString
+							letters="Frontend Mentor"
+							fontFamily="default"
+							fontSize="sm"
+							fontWeight="medium"
+						/>
 					</Link>
 				</div>
+			</div>
+			<div>
+				<p>
+					<RenderString
+						letters="Email me via"
+						fontFamily="default"
+						fontSize="sm"
+						fontWeight="normal"
+					/>
+				</p>
+				<p>
+					<Link
+						href="mailto:kitharveycaubalejo@gmail.com"
+						target="__blank"
+					>
+						<RenderString
+							letters="kitharveycaubalejo@gmail.com"
+							fontFamily="default"
+							fontSize="sm"
+							fontWeight="medium"
+						/>
+					</Link>
+				</p>
 			</div>
 		</div>
 	);
