@@ -24,7 +24,7 @@ const ProjectWrapper: React.FC<ProjectWrapperProps> = ({ project }) => {
 					letters={project.title}
 					fontFamily="default"
 					fontSize="md"
-					fontWeight="bold"
+					fontWeight="medium"
 				/>
 			</p>
 			<p>
@@ -36,7 +36,7 @@ const ProjectWrapper: React.FC<ProjectWrapperProps> = ({ project }) => {
 				/>
 			</p>
 			<ul
-				className="display-flex"
+				className="flex"
 				style={style}
 			>
 				{project.tools.map((tool) => (
@@ -53,7 +53,7 @@ const ProjectWrapper: React.FC<ProjectWrapperProps> = ({ project }) => {
 				))}
 			</ul>
 			<div
-				className="display-flex"
+				className="flex"
 				style={style}
 			>
 				<Link

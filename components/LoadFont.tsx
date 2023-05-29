@@ -1,5 +1,5 @@
 import { useLoadStyle } from "@/hooks/useLoadStyle";
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 interface LoadFontProps {
 	letter: string;

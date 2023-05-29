@@ -1,5 +1,6 @@
 import React from "react";
 import ProjectWrapper from "./ProjectWrapper";
+import RenderString from "./RenderString";
 
 interface ProjectsPageProps {
 	projects: ProjectType[];
@@ -16,6 +17,14 @@ type ProjectType = {
 const Projects: React.FC<ProjectsPageProps> = ({ projects }) => {
 	return (
 		<div id="projects">
+			<p>
+				<RenderString
+					letters="Projects"
+					fontFamily="default"
+					fontSize="md"
+					fontWeight="bold"
+				/>
+			</p>
 			{projects.map((project) => (
 				<ProjectWrapper
 					project={project}

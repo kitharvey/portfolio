@@ -1,5 +1,6 @@
 import React from "react";
 import RenderString from "./RenderString";
+import { useLoadStyle } from "@/hooks/useLoadStyle";
 
 interface AboutPageProps {
 	overview: string;
@@ -13,18 +14,42 @@ type ExpTypes = {
 };
 
 const About: React.FC<AboutPageProps> = ({ overview, experiences }) => {
+	const style = useLoadStyle({ gap: "1em" });
+
 	return (
 		<div id="about">
-			<div>
-				<p>
-					<RenderString
-						letters={overview}
-						fontFamily="default"
-						fontSize="md"
-						fontWeight="normal"
-					/>
-				</p>
+			<div
+				className="flex"
+				style={style}
+			>
 				<div>
+					<p>
+						<RenderString
+							letters="Overview"
+							fontFamily="default"
+							fontSize="md"
+							fontWeight="bold"
+						/>
+					</p>
+					<p>
+						<RenderString
+							letters={overview}
+							fontFamily="default"
+							fontSize="md"
+							fontWeight="normal"
+						/>
+					</p>
+				</div>
+				<div>
+					<p>
+						<RenderString
+							letters="Experience"
+							fontFamily="default"
+							fontSize="md"
+							fontWeight="bold"
+						/>
+					</p>
+
 					{experiences.map((exp, index) => {
 						return (
 							<div key={index}>
@@ -37,11 +62,18 @@ const About: React.FC<AboutPageProps> = ({ overview, experiences }) => {
 									/>
 								</p>
 								<p>
+									{}
+									<RenderString
+										letters={exp.title + " · "}
+										fontFamily="default"
+										fontSize="md"
+										fontWeight="normal"
+									/>
 									<RenderString
 										letters={exp.company}
 										fontFamily="default"
 										fontSize="md"
-										fontWeight="bold"
+										fontWeight="medium"
 									/>
 								</p>
 							</div>

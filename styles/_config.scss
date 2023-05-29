@@ -16,10 +16,10 @@ body {
 
 a {
 	color: inherit;
-	text-decoration: none; /* no underline */
 
 	&:hover {
 		color: $text-color-two;
+		text-decoration: none; /* no underline */
 	}
 }
 
@@ -33,15 +33,15 @@ ul {
 
 .container {
 	width: 100%;
-	min-height: 100vh;
+	min-height: 100dvh;
 	margin: 0 auto;
 	padding: 2em;
-	display: flex;
-	flex-direction: column;
+	display: grid;
+	place-items: center;
 	max-width: 640px;
 }
 
-.display-flex {
+.flex {
 	display: flex;
 	flex-wrap: wrap;
 	gap: 0;

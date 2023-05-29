@@ -50,7 +50,7 @@ const Home: React.FC = ({}) => {
 					/>
 				</p>
 				<div
-					className="display-flex"
+					className="flex"
 					style={style}
 				>
 					<Link
