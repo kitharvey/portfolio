@@ -17,7 +17,7 @@ const LoadFont: React.FC<LoadFontProps> = ({
 	let size = ".875rem";
 	let font = "unset";
 	let weight = 400;
-
+	console.log(letter);
 	switch (fontSize) {
 		case "sm":
 			size = ".875rem";
