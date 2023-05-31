@@ -11,7 +11,7 @@ const Blob: React.FC<BlobProps> = ({}) => {
 				viewBox="0 0 500 500"
 				width="650px"
 				id="blobSvg"
-				style={{ opacity: 0.5 }}
+				style={{ opacity: 0.3 }}
 			>
 				{" "}
 				<defs>
