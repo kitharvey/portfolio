@@ -9,7 +9,10 @@ const Contact = () => {
 	return (
 		<>
 			<HeadTitle title="Contact" />
-			<div id="page" className="contact">
+			<div
+				id="page"
+				className="contact"
+			>
 				<div className="contact-wrapper">
 					<div className="email-wrapper">
 						<div className="email">
@@ -53,7 +56,7 @@ const Contact = () => {
 									.sendForm(
 										`${process.env.NEXT_PUBLIC_SERVICE_ID}`,
 										`${process.env.NEXT_PUBLIC_TEMPLATE_ID}`,
-										"contact-form",
+										"#contact-form",
 										`${process.env.NEXT_PUBLIC_USER_ID}`
 									)
 									.then(
@@ -76,7 +79,10 @@ const Contact = () => {
 						>
 							{({ errors, touched, setFieldValue, isSubmitting }) => (
 								<div className="sign-in-form-main">
-									<Form className="contact-form-container" id="contact-form">
+									<Form
+										className="contact-form-container"
+										id="contact-form"
+									>
 										<label htmlFor="fromName">Name:</label>
 										<Field
 											className="sign-in-inputs"
@@ -92,7 +98,10 @@ const Contact = () => {
 											}}
 										/>
 										<div className="form-error">
-											<ErrorMessage name="fromName" component="p" />
+											<ErrorMessage
+												name="fromName"
+												component="p"
+											/>
 										</div>
 										<label htmlFor="fromEmail">Email:</label>
 										<Field
@@ -109,7 +118,10 @@ const Contact = () => {
 											}}
 										/>
 										<div className="form-error">
-											<ErrorMessage name="fromEmail" component="p" />
+											<ErrorMessage
+												name="fromEmail"
+												component="p"
+											/>
 										</div>
 										<label htmlFor="fromMessage">Message:</label>
 										<Field
@@ -127,7 +139,10 @@ const Contact = () => {
 											}}
 										/>
 										<div className="form-error">
-											<ErrorMessage name="fromMessage" component="p" />
+											<ErrorMessage
+												name="fromMessage"
+												component="p"
+											/>
 										</div>
 
 										<FastField
@@ -141,10 +156,13 @@ const Contact = () => {
 										/>
 
 										<div className="sign-in-form-footer">
-											<button className="sign-in-submit" type="submit">
+											<button
+												className="sign-in-submit"
+												type="submit"
+												disabled={isSubmitting}
+											>
 												Send
 											</button>
-											<p>{isSubmitting}</p>
 										</div>
 									</Form>
 								</div>
@@ -154,7 +172,10 @@ const Contact = () => {
 					<div className="accounts">
 						<p>Follow me on</p>
 						<div className="links">
-							<Link href="https://github.com/kitharvey" target="__blank">
+							<Link
+								href="https://github.com/kitharvey"
+								target="__blank"
+							>
 								GitHub
 							</Link>
 							<Link
@@ -163,7 +184,10 @@ const Contact = () => {
 							>
 								LinkedIn
 							</Link>
-							<Link href="https://twitter.com/kithrvy/" target="__blank">
+							<Link
+								href="https://twitter.com/kithrvy/"
+								target="__blank"
+							>
 								Twitter
 							</Link>
 						</div>
