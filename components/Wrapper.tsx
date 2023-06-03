@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Blob from "./Blob";
+import Tiles from "./Tiles";
 
 interface WrapperProps {
 	children: JSX.Element | JSX.Element[] | "() => JSX.Element";
@@ -21,6 +22,7 @@ const Wrapper: React.FC<WrapperProps> = ({ children }) => {
 			onMouseMove={mouseMoveHandler}
 		>
 			<Blob />
+			<Tiles />
 			{children}
 		</div>
 	);

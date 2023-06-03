@@ -1,0 +1,35 @@
+#blobSvg {
+	position: fixed;
+	transform: translate(-50%, -50%);
+	animation: myAnimation 5000ms forwards;
+	transition: all ease-in-out;
+	top: var(--yaxis);
+	left: var(--xaxis);
+}
+
+#blur {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	backdrop-filter: blur(50px);
+}
+.tiles {
+	position: fixed;
+	height: 100dvh;
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(var(--columns), 1fr);
+	grid-template-rows: repeat(var(--rows), 1fr);
+}
+.tile {
+	position: relative;
+	display: inline-block;
+	&::before {
+		content: "";
+		position: absolute;
+		inset: 1px;
+		background-color: $bg-color;
+	}
+}
