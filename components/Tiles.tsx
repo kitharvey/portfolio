@@ -1,10 +1,10 @@
-import useWindowDimensions from "@/hooks/useWindowDimensions";
+import useTilesNumber from "@/hooks/useTilesNumber";
 import React from "react";
 
 interface TilesProps {}
 
 const Tiles: React.FC<TilesProps> = ({}) => {
-	const tiles = useWindowDimensions();
+	const tiles = useTilesNumber();
 
 	return (
 		<div className="tiles">
