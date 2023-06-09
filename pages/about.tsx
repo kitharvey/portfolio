@@ -38,7 +38,10 @@ const About = () => {
 	return (
 		<>
 			<HeadTitle title="About" />
-			<div id="page" className="about">
+			<div
+				id="page"
+				className="about"
+			>
 				<div className="about-container">
 					<div className="about-details">
 						<div className="overview">
@@ -50,7 +53,10 @@ const About = () => {
 							<div className="company-wrapper">
 								{experiences.map((exp) => {
 									return (
-										<div className="company-section" key={exp.company}>
+										<div
+											className="company-section"
+											key={exp.company}
+										>
 											<p className="time">{exp.date}</p>
 											<p className="company">
 												<span>{exp.title}</span>&nbsp;&#64;&nbsp;{exp.company}
